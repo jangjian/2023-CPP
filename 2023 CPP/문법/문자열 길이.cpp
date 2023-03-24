@@ -6,14 +6,15 @@
 #include <iostream>
 #include <string>	
 
-using namespace std;
+using namespace std; 
 
 int main(void) {
-	char str1[30] = "Jiwoo";
-	int len = strlen(str1); 
+	string str1 = "Jiwoo";
+
+	// str1.length()도 가능하나 size()를 권장
+	cout << "문자열의 길이는" << str1.size() << endl;
 
 
-	printf("문자열의 길이는 %d \n", len);
 	return 0;
 }
 
