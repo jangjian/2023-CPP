@@ -17,6 +17,15 @@ public :
     string tel;
     string department;
     string address;
+
+    // class는 멤버 함수를 가질 수 있다.
+    void print(void) {
+        cout << "학번 : " << studentNum << endl;
+        cout << "이름 : " << name << endl;
+        cout << "전화번호 : " << tel << endl;
+        cout << "학과 : " << department << endl;
+        cout << "주소 : " << address << endl;
+    }
 };
 int main() {
     // 자료형 : struct student(C++에서는 student만 써도 가능)
@@ -27,12 +36,7 @@ int main() {
     stu1.department = "뉴미디어소프트웨어과";
     stu1.address = "경기도 의왕시 청계동";
 
-    cout << "학번 : " << stu1.studentNum << endl;
-    cout << "이름 : " << stu1.name << endl;
-    cout << "전화번호 : " << stu1.tel << endl;
-    cout << "학과 : " << stu1.department << endl;
-    cout << "주소 : " << stu1.address << endl;
-
+    stu1.print();
 
     return 0;
 
