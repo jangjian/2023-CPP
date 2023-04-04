@@ -8,20 +8,10 @@ using namespace std;
 // class는 default가 private (struct는 default가 public)
 class Student
 {
-    // 성능 때문에 studentNum을 문자열로 하지 않음
-    // 일반적으로 문자열은 정수형 데이터보다 많은 메모리 공간을 요구하며
-    // 정수는 비교연산을 한번에 할 수 있으나, 문자열은 글자수만큼 반복하여 비교해야 함.
-private :
-    int studentNum;
-    string name;
-    string tel;
-    string department;
-    string address;
-
 public:
     // 생성자(constructor) : 객체를 생성할 때 호출되는 함수
     // 생성자를 정의하지 않으면 default로 매개변수가 없는 생성자가 정의된다.
-    Student() 
+    Student()
     {
         studentNum = 2215;
         name = "장지안";
@@ -29,7 +19,6 @@ public:
         department = "뉴미디어소프트웨어과";
         address = "경기도 의왕시 청계동";
     }
-   
     // class는 멤버 함수를 가질 수 있다.
     void print(void) {
         cout << "학번 : " << studentNum << endl;
@@ -38,11 +27,22 @@ public:
         cout << "학과 : " << department << endl;
         cout << "주소 : " << address << endl;
     }
+    
+private :
+    // 성능 때문에 studentNum을 문자열로 하지 않음
+    // 일반적으로 문자열은 정수형 데이터보다 많은 메모리 공간을 요구하며
+    // 정수는 비교연산을 한번에 할 수 있으나, 문자열은 글자수만큼 반복하여 비교해야 함.
+    int studentNum;
+    string name;
+    string tel;
+    string department;
+    string address;
+   
+    
 };
 int main() {
     // 자료형 : struct student(C++에서는 student만 써도 가능)
-    Student stu1;
-    
+    Student stu1; 
 
     stu1.print();
 
