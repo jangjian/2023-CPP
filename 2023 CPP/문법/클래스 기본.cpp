@@ -19,6 +19,14 @@ public:
         department = "뉴미디어소프트웨어과";
         address = "경기도 의왕시 청계동";
     }
+
+    Student(int _studentNum, string _name, string _tel, string _department, string _address) {
+        studentNum = _studentNum;
+        name = _name;
+        tel = _tel;
+        department = _department;
+        address = _address;
+    }
     // class는 멤버 함수를 가질 수 있다.
     void print(void) {
         cout << "학번 : " << studentNum << endl;
@@ -42,10 +50,15 @@ private :
 };
 int main() {
     // 자료형 : struct student(C++에서는 student만 써도 가능)
-    Student stu1; 
+    //Student stu1(2215, "장지안", "010-5725-0524", "뉴미디어소프트웨어과", "경기도 의왕시 청계동");
 
-    stu1.print();
+    Student stu1 = Student();
 
+    // stu1.print();
+
+    Student stu2 = Student(2215, "장지안", "010-5725-0524", "뉴미디어소프트웨어과", "경기도 의왕시 청계동");
+
+    stu2.print();
     return 0;
 
 }
