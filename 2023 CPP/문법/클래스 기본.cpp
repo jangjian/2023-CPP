@@ -26,12 +26,14 @@ public:
         address = "경기도 의왕시 청계동";
     }
 
-    Student(int _studentNum, string _name, string _tel, string _department, string _address) {
-        studentNum = _studentNum;
-        name = _name;
-        tel = _tel;
-        department = _department;
-        address = _address;
+    Student(int studentNum, string name, string tel, string department, string address) {
+        // this : 객체 자기자신을 가리키는 포인터
+        // 멤버변수와 매개변수가 이름이 같아도 구별가능
+        this->studentNum = studentNum;
+        this->name = name;
+        this->tel = tel;
+        this->department = department;
+        this->address = address;
     }
     // class는 멤버 함수를 가질 수 있다.
     void print(void) {
@@ -64,17 +66,8 @@ int main() {
 
     Student stu2 = Student(2215, "장지안", "010-5725-0524", "뉴미디어소프트웨어과", "경기도 의왕시 청계동");
 
-    // stu2.print();
+    stu2.print();
 
-    struct Person p;
-    p.height = 186;
-    p.weight = 82;
-
-    struct Person* ptr = &p;
-
-    // 둘 다 같은 결과
-    cout << "키 : " << ptr->height << endl;
-    cout << "몸무게 : " << (*ptr).weight << endl;
 
     return 0;
 
