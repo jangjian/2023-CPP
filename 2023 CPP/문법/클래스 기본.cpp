@@ -61,9 +61,13 @@ int main() {
 
     // stu1.print();
 
-    Student stu2 = Student(2215, "장지안", "010-5725-0524", "뉴미디어소프트웨어과", "경기도 의왕시 청계동");
+    // 정적할당
+    // Student stu2 = Student(2215, "장지안", "010-5725-0524", "뉴미디어소프트웨어과", "경기도 의왕시 청계동");
+    //  stu2.print();
 
-    stu2.print();
+    //동적할당
+    Student* stu3 = new Student(22, "율곡", "010-0000-0000", "유교", "한성");
+    stu3->print();
 
 
     return 0;
