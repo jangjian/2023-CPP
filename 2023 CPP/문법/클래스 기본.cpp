@@ -20,11 +20,7 @@ public:
     // 생성자를 정의하지 않으면 default로 매개변수가 없는 생성자가 정의된다.
     Student()
     {
-        studentNum = 2215;
-        name = "장지안";
-        tel = "010-5725-0524";
-        department = "뉴미디어소프트웨어과";
-        address = "경기도 의왕시 청계동";
+      
     }
 
     Student(int _studentNum, string _name, string _tel, string _department, string _address)
@@ -41,6 +37,12 @@ public:
         cout << "학과 : " << department << endl;
         cout << "주소 : " << address << endl;
     }
+
+    void set_studentNum(int _studentNum) { studentNum = _studentNum; }
+    void set_name(string _name) { name = _name; }
+    void set_tel(string _tel) { tel = _tel; }
+    void set_department(string _department) { department = _department; }
+    void set_address(string _address) { address = _address; }
     
 private :
     // 성능 때문에 studentNum을 문자열로 하지 않음
@@ -72,15 +74,27 @@ int main() {
     }*/
 
 
-    //동적할당 : 실행시간(running time)에 메모리 크기가 결정(메모리 heap 영역)
+    // 동적할당 : 실행시간(running time)에 메모리 크기가 결정(메모리 heap 영역)
     // 동적할당된 공간은 포인터로 접근한다.
-    //Student* stu3 = new Student(22, "율곡", "010-0000-0000", "유교", "한성");
-    //stu3->print();    // stu3의 멤버는 ->으로 접근
+    // Student* stu3 = new Student(22, "율곡", "010-0000-0000", "유교", "한성");
+    // stu3->print();    // stu3의 멤버는 ->으로 접근
 
     //동적할당 해제(안하면 메모리 누수현상이 발생)
     //delete stu3;
 
     Student* stu4 = new Student[2];
+    stu4[0].set_name("박진영");
+    stu4[0].set_address("니가사는그집");
+    stu4[0].set_studentNum(1111);
+    stu4[0].set_department("뉴미디어소프트웨어");
+    stu4[0].set_tel("000-0000-0000");
+
+    stu4[1].set_name("선미");
+    stu4[1].set_address("서울어딘가");
+    stu4[1].set_studentNum(1112);
+    stu4[1].set_department("뉴미디어소프트웨어");
+    stu4[1].set_tel("000-0000-0001");
+
 
     for (int i = 0; i < 2; i++) {
         stu4[i].print();    // stu4[i]의 멤버는 .으로 접근
