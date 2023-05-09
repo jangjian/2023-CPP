@@ -16,6 +16,12 @@ public:
 
 	}
 
+	// 복사생성자(별도의 정의가 없으면 컴파일러가 알아서 만들어 줌)
+	MString(const MString& rhs)
+		: c_str_(rhs.c_str_),size_(rhs.size_)
+	{
+	}
+
 	// 소멸자(destructor)
 	~MString()
 	{
@@ -32,8 +38,10 @@ private:
 };
 
 int main(void) {
+	// 일반 생성자 호출
 	MString str = MString("I will be back");
-	cout << str.c_str() << endl;
+	MString str2 = str;
+
 
 	return 0;
 }
