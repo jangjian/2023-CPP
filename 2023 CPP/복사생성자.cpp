@@ -12,8 +12,10 @@ public :
 		cout << "일반생성자 호출" << endl;
 	}
 
-	// 복사생성자(얕은 복사)
-	Munja(const Munja& hj) : str_(hj.str_) {
+	// 복사생성자
+	Munja(const Munja& hj) {
+		str_ = new char[strlen(hj.str_) + 1];
+		strcpy(str_, hj.str_);
 		cout << "복사생성자 호출" << endl;
 	}
 
@@ -29,7 +31,7 @@ private:
 int main(void)
 {
 	Munja m1 = Munja("abc");	// 일반 생성자 호출
-	Munja m2 = m1;				
+	Munja m2 = m1;				// 복사 생성자 호출
 
 
 	return 0;
