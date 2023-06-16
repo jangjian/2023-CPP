@@ -11,9 +11,10 @@ public:
 		
 	}
 	~Animal() { cout << "동물 소멸자" << endl; }
-	void Bark(void) { cout << "동물 짖는다" << endl; }
-	void Eat(void) { cout << "동물 먹는다" << endl; }
-	void Hunt(void) { cout << "동물 사냥한다" << endl; }
+	// 동적 바인딩
+	virtual void Bark(void) { cout << "동물 짖는다" << endl; }
+	virtual void Eat(void) { cout << "동물 먹는다" << endl; }
+	virtual void Hunt(void) { cout << "동물 사냥한다" << endl; }
 
 private:
 	int age_;
@@ -47,7 +48,7 @@ int main(void)
 
 
 	animal= new Crane(3, "지우", 108);	// 부모의 멤버변수를 사용
-	animal->Bark();	// 부모의 멤버함수를 사용
+	animal->Bark();	// 두루두루
 	delete animal;
 
 	return 0;
