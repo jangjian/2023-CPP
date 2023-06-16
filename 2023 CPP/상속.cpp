@@ -8,8 +8,7 @@ public:
 	Animal(int age, string name) : age_(age), name_(name) 
 	{
 		cout << "동물 생성자" << endl; 
-		cout << "나이 " << age_<< endl;
-		cout << "이름 " << name_ << endl;
+		
 	}
 	~Animal() { cout << "동물 소멸자" << endl; }
 	void Bark(void) { cout << "동물 짖는다" << endl; }
@@ -29,18 +28,27 @@ public:
 	{
 		cout << "두루미 생성자" << endl; 
 		leg_length_ = leg_length;
-		cout << "다리 길이" << leg_length_ << endl;
 	}
 	~Crane() { cout << "두루미 소멸자" << endl; }	// 자식 클래스가 나중에 생성되고 부모 클래스보다 먼저 호출된다.
+
+	void Bark()
+	{
+		cout << "두루두루" << endl;
+	}
 private:
 	int leg_length_;
 };
 
 int main(void)
 {
-	Crane* crane = new Crane(3, "지우", 108);	// 부모의 멤버변수를 사용
-	crane->Eat();	// 부모의 멤버함수를 사용
+	Animal* animal = new Animal(18, "동물이");
+	animal->Bark();
+	delete animal;
 
-	delete crane;
+
+	animal= new Crane(3, "지우", 108);	// 부모의 멤버변수를 사용
+	animal->Bark();	// 부모의 멤버함수를 사용
+	delete animal;
+
 	return 0;
 }
