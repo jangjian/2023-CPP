@@ -32,7 +32,8 @@ public:
 	}
 	~Crane() { cout << "두루미 소멸자" << endl; }	// 자식 클래스가 나중에 생성되고 부모 클래스보다 먼저 호출된다.
 
-	void Bark()
+	// 오타같은 실수를 방지하기 위해 override 키워드를 사용(Java의 @override)
+	void Bark() override
 	{
 		cout << "두루두루" << endl;
 	}
@@ -42,12 +43,7 @@ private:
 
 int main(void)
 {
-	Animal* animal = new Animal(18, "동물이");
-	animal->Bark();
-	delete animal;
-
-
-	animal= new Crane(3, "지우", 108);	// 부모의 멤버변수를 사용
+	Animal* animal= new Crane(3, "지우", 108);	// 부모의 멤버변수를 사용
 	animal->Bark();	// 두루두루
 	delete animal;
 
