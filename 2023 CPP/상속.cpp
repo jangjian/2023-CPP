@@ -10,7 +10,9 @@ public:
 		cout << "동물 생성자" << endl; 
 		
 	}
-	~Animal() { cout << "동물 소멸자" << endl; }
+
+	// 소멸자에는 무조건 virtual을 넣자(메모리 누수 방지)
+	virtual ~Animal() { cout << "동물 소멸자" << endl; }
 	// 동적 바인딩
 	virtual void Bark(void) { cout << "동물 짖는다" << endl; }
 	virtual void Eat(void) { cout << "동물 먹는다" << endl; }
@@ -30,7 +32,7 @@ public:
 		cout << "두루미 생성자" << endl; 
 		leg_length_ = leg_length;
 	}
-	~Crane() { cout << "두루미 소멸자" << endl; }	// 자식 클래스가 나중에 생성되고 부모 클래스보다 먼저 호출된다.
+	virtual ~Crane() { cout << "두루미 소멸자" << endl; }	// 자식 클래스가 나중에 생성되고 부모 클래스보다 먼저 호출된다.
 
 	// 오타같은 실수를 방지하기 위해 override 키워드를 사용(Java의 @override)
 	void Bark() override
