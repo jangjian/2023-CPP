@@ -26,7 +26,7 @@ private:
 };
 
 class Crane : public Animal
-{
+{3
 public:
 	// 별도의 언급이 없어도 매개변수가 없는 부모생성자가 호출된다.
 	Crane(int age, string name, int leg_length) : Animal(age, name)
