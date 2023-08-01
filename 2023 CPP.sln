@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2023 CPP", "2023 CPP\2023 C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnakeGame", "SnakeGame\SnakeGame.vcxproj", "{BA6E8947-CA8E-43E5-A0AB-B745521DCA1C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inheritance", "Inheritance\Inheritance.vcxproj", "{ECC85BB7-2814-4C6E-BA91-45E992F313EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{BA6E8947-CA8E-43E5-A0AB-B745521DCA1C}.Release|x64.Build.0 = Release|x64
 		{BA6E8947-CA8E-43E5-A0AB-B745521DCA1C}.Release|x86.ActiveCfg = Release|Win32
 		{BA6E8947-CA8E-43E5-A0AB-B745521DCA1C}.Release|x86.Build.0 = Release|Win32
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Debug|x64.ActiveCfg = Debug|x64
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Debug|x64.Build.0 = Debug|x64
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Debug|x86.ActiveCfg = Debug|Win32
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Debug|x86.Build.0 = Debug|Win32
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Release|x64.ActiveCfg = Release|x64
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Release|x64.Build.0 = Release|x64
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Release|x86.ActiveCfg = Release|Win32
+		{ECC85BB7-2814-4C6E-BA91-45E992F313EC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
