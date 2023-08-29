@@ -3,9 +3,11 @@
 
 using namespace std;
 
+template <typename T>
+
 class Player {
-public :
-    Player(string name, int health, int attack, int defense)
+public:
+    Player(string name, T health, T attack, T defense)
         : name_(name), health_(health), attack_(attack), defense_(defense)
     {
 
@@ -20,13 +22,13 @@ public :
 
 private:
     string name_;
-    int health_;
-    int attack_;
-    int defense_;
+    T health_;
+    T attack_;
+    T defense_;
 };
 
 int main() {
-    Player* p1 = new Player("½´ÆÛ¸Ç", 100, 20, 5);
+    Player<int>* p1 = new Player<int>("½´ÆÛ¸Ç", 100, 20, 5);
     p1->present();
 
     delete p1;
