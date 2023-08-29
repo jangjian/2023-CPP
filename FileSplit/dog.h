@@ -1,8 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include "animal.h"
-using namespace std;
+#include "all.h"; 
 
 class Dog : public Animal{
 public:
