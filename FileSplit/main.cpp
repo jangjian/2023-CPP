@@ -1,6 +1,7 @@
-#include "animal.h"
+﻿#include "animal.h"
 #include "cat.h"
 #include "dog.h"
+﻿#include <SFML/Graphics.hpp>
 
 using namespace std;
 

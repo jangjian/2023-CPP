@@ -1,6 +1,6 @@
 ﻿#include <time.h> //time()
 #include <stdlib.h> //srand(), rand()
-﻿#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
 #define DIR_UP		0
 #define DIR_DOWN	1
